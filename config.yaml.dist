@@ -1,0 +1,21 @@
+master:
+  address: 0.0.0.0
+  port: 8008
+
+services:
+  heroku: /heroku
+
+targets:
+  irc:
+    server: irc.freenode.net
+    port: 6667
+    channels: ['##codeblock']
+    nick: sloth_test
+    services: none
+  irc1:
+    target: irc
+    server: irc.slashnet.org
+    port: 6667
+    channels: ['####foobar']
+    nick: sloth_test
+    services: heroku
